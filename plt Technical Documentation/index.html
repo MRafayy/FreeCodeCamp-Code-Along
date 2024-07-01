@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Matplotlib Documentation">
+    <title>Matplotlib Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar">
+        <h1>plt Documentation</h1>
+        <ul>
+          <li><a href="#Install">Install</a></li>
+          <li><a href="#Figures_and_Backends">Figures and Backends</a></li>
+          <li><a href="#Axes_or_Subplot">Axes or Subplots</a></li>
+          <li><a href="#Text">Text</a></li>
+          <li><a href="#Animations">Animations</a></li>
+      </nav>
+
+    <header>
+    <main id="main-doc">
+      <section class="main-section" id="Install">
+        <h2>Install</h2>
+      </section>
+      <section class="main-section" id="Figures_and_backends">
+        <h2>Figures and Backends</h2>
+      </section>
+      <section class="main-section" id="Axes_or_Subplots">
+        <h2>Axes or Subplots</h2>
+      </section>
+      
+      <section class="main-section" id="Text">
+        <h2>Text</h2>
+        <p>Matplotlib has extensive text support, including support for mathematical expressions, truetype support for raster and vector outputs, newline separated text with arbitrary rotations, and Unicode support.</p>
+        <p> Here are functions which use text. All of these functions create and return a Text instance, which can be configured with a variety of font and other properties</p>
+        <div  class="table-wrap">
+          <table>
+            <caption>Common Functions for Text</caption>
+            <thead>
+              <tr>
+                <th>Implicit AP</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>text</td>
+                <td>Add text at an arbitrary location of the Axes.</td>
+              </tr>
+              <tr>
+                <td>annotate</td>
+                <td>Add an annotation, with an optional arrow, at an arbitrary location of the Axes.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="main-section" id="Animations">
+        <h2>Animations</h2>
+        <p>Matplotlib can also generate animations. It is done frame-by-frame, where each frame is a plot from Figure. Here is how to create an Animation: </p>
+        <code>
+          <p>import matplotlib.pyplot as plt</p>
+          <p>import numpy as np</p>
+          <p>import matplotlib.animation as animation</p>
+        </code>
+      </section>
+    </main>
+  </body>
+
+</html>
