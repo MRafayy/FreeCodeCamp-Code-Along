@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Matplotlib Documentation">
+    <title>Matplotlib Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  
+  <body>
+    <header>
+      <nav id="navbar">
+        <header>
+          <h1>plt Documentation</h1>
+        </header>
+        <ul>
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li><a class="nav-link" href="#Install">Install</a></li>
+          <li><a class="nav-link" href="#Figures_and_Backends">Figures and Backends</a></li>
+          <li><a class="nav-link" href="#Axes_or_Subplots">Axes or Subplots</a></li>
+          <li><a class="nav-link" href="#Text">Text</a></li>
+          <li><a class="nav-link" href="#Animations">Animations</a></li>
+      </nav>
+
+    </header>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>
+          <h2>Introduction</h2>
+        </header>
+        <p>Matplotlib graphs your data on Figures (e.g., windows, Jupyter widgets, etc.), each of which can contain one or more Axes, an area where points can be specified in terms of x-y coordinates (or theta-r in a polar plot, x-y-z in a 3D plot, etc.). The simplest way of creating a Figure with an Axes is using pyplot.subplots. We can then use Axes.plot to draw some data on the Axes, and show to display the figure.</p>
+        <p>Here are 5 reasons as to why you should use Matplotlib</p>
+        <ul>
+          <li> Versatility: plt supports a wide range of plot types, from simple line plots to complex 3D visualizations, allowing you to create virtually any type of graph or chart.</li>
+          <li>Customization: plt offers extensive options for customizing every aspect of your plots, including colors, styles, labels, and layouts, giving you full control over the appearance of your visualizations</li>
+          <li>Integration with NumPy and Pandas: plt works seamlessly with NumPy arrays and Pandas DataFrames, making it easy to visualize data from these popular data analysis libraries</li>
+          <li>Subplots functionality: plt.subplots() allows you to create multiple plots in a single figure, enabling easy comparison and organization of related visualizations</li>
+          <li>Publication-quality output: plt can generate high-quality images in various formats suitable for publication, presentations, or web display.</li>
+
+      </section>
+
+      <section class="main-section" id="Install">
+        <header>
+          <h2>Install</h2>
+        </header>
+        <p>Here is how to install plt</p>
+        <code>
+          pip install matplotlib
+        </code>
+      </section>
+      <section class="main-section" id="Figures_and_Backends">
+        <header>
+          <h2>Figures and Backends</h2>
+        </header>
+        <p>When looking at Matplotlib visualization, you are almost always looking at Artists placed on a Figure. In the example below, the figure is the blue region and add_subplot has added an Axes artist to the Figure (see Parts of a Figure). A more complicated visualization can add multiple Axes to the Figure, colorbars, legends, annotations, and the Axes themselves can have multiple Artists added to them (e.g. ax.plot or ax.imshow).<p/>
+        <p> Here's how to code it: </p>
+        <div class="code-cont">
+          <code>
+            <p>fig = plt.figure(figsize=(4, 2), facecolor='lightskyblue',layout='constrained')<p>
+            <p>fig = plt.figure(figsize=(4, 2), facecolor='lightskyblue',layout='constrained')</p>
+            <p>fig.suptitle('A nice Matplotlib Figure')</p>
+            <p>ax = fig.add_subplot()</p>
+            <p>ax.set_title('Axes', loc='left' fontstyle='oblique', fontsize='medium')fig.suptitle('A nice Matplotlib Figure')</p>
+            <p>ax = fig.add_subplot()</p>
+            <p>ax.set_title('Axes', loc='left', fontstyle='oblique', fontsize='medium')</p>
+          </code>
+        </div>
+      </section>
+      <section class="main-section" id="Axes_or_Subplots">
+        <header>
+          <h2>Axes or Subplots</h2>
+        </header>
+        <p>Matplotlib Axes are the gateway to creating your data visualizations. Once an Axes is placed on a figure there are many methods that can be used to add data to the Axes. An Axes typically has a pair of Axis Artists that define the data coordinate system, and include methods to add annotations like x- and y-labels, titles, and legends.</p>
+        <p>Here is how to create an Axis: </p>
+        <code>
+          <p>import matplotlib.pyplot as plt</p>
+          <p>import numpy as np</p>
+          <p>fig, axs = plt.subplots(ncols=2, nrows=2, figsize=(3.5, 2.5)</p>
+        </code>
+      </section>
+      
+      <section class="main-section" id="Text">
+        <header>
+          <h2>Text</h2>
+        </header>
+        <p>Matplotlib has extensive text support, including support for mathematical expressions, truetype support for raster and vector outputs, newline separated text with arbitrary rotations, and Unicode support.</p>
+        <p> Here are functions which use text. All of these functions create and return a Text instance, which can be configured with a variety of font and other properties</p>
+        <div  class="table-wrap">
+          <table>
+            <caption>Common Functions for Text</caption>
+            <thead>
+              <tr>
+                <th>Implicit AP</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>text</td>
+                <td>Add text at an arbitrary location of the Axes.</td>
+              </tr>
+              <tr>
+                <td>annotate</td>
+                <td>Add an annotation, with an optional arrow, at an arbitrary location of the Axes.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>This is how it's used in code: </p>
+        <code>
+          <p>import matplotlib.pyplot as plt</p>
+          <p>import matplotlib</p>
+          <p>fig = plt.figure()</p>
+          <p>ax = fig.add_subplot()</p>
+          <p>fig.subplots_adjust(top=0.85)</p>
+        </code>
+      </section>
+
+      <section class="main-section" id="Animations">
+        <header>
+          <h2>Animations</h2>
+        </header>
+        <p>Matplotlib can also generate animations. It is done frame-by-frame, where each frame is a plot from Figure. Here is how to create an Animation: </p>
+        <code>
+          <p>import matplotlib.pyplot as plt</p>
+          <p>import numpy as np</p>
+          <p>import matplotlib.animation as animation</p>
+        </code>
+      </section>
+    </main>
+  </body>
+
+</html>
